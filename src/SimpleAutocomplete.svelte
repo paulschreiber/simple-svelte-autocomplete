@@ -307,8 +307,8 @@
     if (debug) {
       console.log("selectListItem");
     }
-    const newSelectedItem = listItem.item;
-    if (beforeChange(selectedItem, newSelectedItem)) {
+    const newSelectedItem = listItem ? listItem.item : undefined;
+    if (newSelectedItem && beforeChange(selectedItem, newSelectedItem)) {
       selectedItem = newSelectedItem;
     }
   }
